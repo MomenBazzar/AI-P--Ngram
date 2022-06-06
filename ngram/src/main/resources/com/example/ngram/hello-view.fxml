@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ngram.NgramController">
+   <children>
+      <Label layoutX="200.0" layoutY="50.0" prefWidth="200.0" style="-fx-alignment: center;" text="أدخل النص هنا" />
+      <TextField fx:id="textInput" alignment="TOP_RIGHT" layoutX="80.0" layoutY="70.0" prefWidth="500.0" />
+      <Button layoutX="20.0" layoutY="70.0" mnemonicParsing="false" onMouseClicked="#Run" prefWidth="60.0" text="تشغيل" />
+      <Label fx:id="labelAnswer" layoutX="225.0" layoutY="203.0" prefHeight="182.0" prefWidth="150.0" style="-fx-alignment: center; -fx-background-color: #eee;" />
+      <ScrollPane hbarPolicy="ALWAYS" layoutX="20.0" layoutY="115.0" prefHeight="30.0" prefWidth="550.0" vbarPolicy="NEVER">
+         <content>
+            <HBox fx:id="wordsHBox" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#wordClicked" prefHeight="20.0" prefWidth="550.0" spacing="5.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
